@@ -1,5 +1,5 @@
-#ifndef __TOKEN_H__
-#define __TOKEN_H__
+#ifndef _TOKEN_H_
+#define _TOKEN_H_
 
 #include <string>
 
@@ -10,12 +10,14 @@ class Token
 {
 
 public:
-	Token() = default;
+	std::string lexeme;
+	Token(const std::string str1 ) { lexeme = str1;}
+
 	~Token() = default;
 
-	std::string stringRepresentation() const { return ""; }
+	std::string stringRepresentation() const { return lexeme; }
 };
 
 }
 
-#endif // __TOKEN_H__
+#endif // _TOKEN_H_
